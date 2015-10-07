@@ -1,5 +1,70 @@
 <ion-view mz-screen view-title="{{ title | translate }}">
     <ion-content>
-        <p>Hello world.</p>
+        <div class="filters">
+	        <ion-scroll direction="x">
+	        	<a class="ion-coffee filter"></a>
+	        	<a class="ion-wineglass filter"></a>
+	        	<a class="ion-beer filter"></a>
+	        	<a class="ion-icecream filter"></a>
+	        	<a class="ion-pizza filter"></a>
+				<a class="ion-coffee filter"></a>
+	        	<a class="ion-wineglass filter"></a>
+	        	<a class="ion-beer filter"></a>
+	        	<a class="ion-icecream filter"></a>
+	        	<a class="ion-pizza filter"></a>
+	        </ion-scroll>
+        </div>
+        <div class="wrapper">
+        	<ion-scroll class="scroller">
+	        	<table class="schedule">
+	        		<tbody>
+	        			<tr>
+	        				<td id="time" class="column">
+	        					<div id="reference" class="time"> <p class="hour">12am</p></div>
+	        					<div class="time"> <p class="hour">1am</p></div>
+	        					<div class="time"> <p class="hour">2am</p></div>
+	        					<div class="time"> <p class="hour">3am</p></div>
+	        					<div class="time"> <p class="hour">4am</p></div>
+	        					<div class="time"> <p class="hour">5am</p></div>
+	        					<div class="time"> <p class="hour">6am</p></div>
+	        					<div class="time"> <p class="hour">7am</p></div>
+	        					<div class="time"> <p class="hour">8am</p></div>
+	        					<div class="time"> <p class="hour">9am</p></div>
+	        					<div class="time"> <p class="hour">10am</p></div>
+	        					<div class="time"> <p class="hour">11am</p></div>
+	        					<div class="time"> <p class="hour">12am</p></div>
+	        					<div class="time"> <p class="hour">1pm</p></div>
+	        					<div class="time"> <p class="hour">2pm</p></div>
+	        					<div class="time"> <p class="hour">3pm</p></div>
+	        					<div class="time"> <p class="hour">4pm</p></div>
+	        					<div class="time"> <p class="hour">5pm</p></div>
+	        					<div class="time"> <p class="hour">6pm</p></div>
+	        					<div class="time"> <p class="hour">7pm</p></div>
+	        					<div class="time"> <p class="hour">8pm</p></div>
+	        					<div class="time"> <p class="hour">9pm</p></div>
+	        					<div class="time"> <p class="hour">10pm</p></div>
+	        					<div class="time"> <p class="hour">11pm</p></div>
+	        				</td>
+	        				<td id="filter1" class="column twoselected">
+	        					<div style="position: absolute;top:2.5%;height:10%" class="twoselected show trending">
+	        						ESPN Compact. Premier League 2015-2016. Manchester City vs NewCastle
+	        					</div>
+	        					<div style="position: absolute;top:12.5%;height:5%" class="twoselected show">
+	        						UEFA Champions League Weekly
+	        					</div>
+	        					<div style="position: absolute;top:17.5%" class="twoselected show">
+	        						Camino a Rio 2016
+	        					</div>
+	        				</td>
+	        				<td id="filter2" class="column">
+	        					<div style="position: absolute;top:30%" class="twoselected show">
+	        						Evento 1
+	        					</div>
+	        				</td>
+	        			</tr>
+	        		</tbody>
+	        	</table>
+        	</ion-scroll>
+        </div>
     </ion-content>
 </ion-view>

@@ -2,7 +2,103 @@
 //They may be overridden by the application using the screen.
 
 $myColor: #00dda0;
+$showColor: #300600;
+$showTextColor: #FFFFFF;
+$showColorEven: #5E5D57;
+$showTextColorEven: #FFFFFF;
+$trendingColor: #730600;
+$timeColorOdd: #FFFFFF;
+$timeColorEven: #4F4F4F;
+$timeTextEven: #FFFFFF;
+$columnBorderColor: #DDD;
 
 .customHeader {
   color: $myColor;
+}
+
+.filter {
+	display: inline-block;
+	padding: 3% 3% 3% 3%;
+	font-size: 50px;
+}
+
+.filters {
+	white-space: nowrap;
+}
+
+.scroll-bar-indicator
+{
+	display: none;
+}
+
+#time {
+	width:20%;
+}
+
+.time {
+	height: 5%;
+	padding: none;
+	margin: none;
+	white-space:nowrap;
+	text-align:center;
+}
+
+.time:nth-child(even) {
+	background-color: $timeColorEven;
+	color: $timeTextEven;
+}
+
+.column {
+	border-left:1px solid $columnBorderColor;
+	height:100%;
+}
+
+.scroller {
+	height: 550px;
+}
+
+.schedule {
+	margin: 2% 4% 2% 0%;
+	height: 2000px;
+	width: 100%;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100wh;
+	padding: 2% 4% 2% 4%;
+}
+
+td div {
+	display:block;
+}
+
+.oneselected {
+	width:80%;
+}
+
+.twoselected {
+	width:40%;
+}
+
+.trending {
+	box-shadow: 0 0 0 5px $trendingColor inset;
+}
+
+.show {
+	background: $showColor;
+	padding: 5px 7px;
+	color: $showTextColor;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.show:nth-child(even) {
+	background: $showColorEven;
+	color: $showTextColorEven;
+}
+
+.hour {
+	vertical-align: center;
 }
