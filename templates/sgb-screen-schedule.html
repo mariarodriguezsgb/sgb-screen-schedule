@@ -2,16 +2,9 @@
     <ion-content>
         <div class="filters">
 	        <ion-scroll direction="x">
-	        	<a class="ion-coffee filter"></a>
-	        	<a class="ion-wineglass filter"></a>
-	        	<a class="ion-beer filter"></a>
-	        	<a class="ion-icecream filter"></a>
-	        	<a class="ion-pizza filter"></a>
-				<a class="ion-coffee filter"></a>
-	        	<a class="ion-wineglass filter"></a>
-	        	<a class="ion-beer filter"></a>
-	        	<a class="ion-icecream filter"></a>
-	        	<a class="ion-pizza filter"></a>
+	        	<a class="channel_icon" ng-repeat="channel in data" ng-click="check(channel">
+	        		<img src="channel.img">
+	        	</a>
 	        </ion-scroll>
         </div>
         <div class="wrapper">
@@ -45,20 +38,12 @@
 	        					<div class="time"> <p class="hour">10pm</p></div>
 	        					<div class="time"> <p class="hour">11pm</p></div>
 	        				</td>
-	        				<td id="filter1" class="column twoselected">
-	        					<div style="position: absolute;top:2.5%;height:10%" class="twoselected show trending">
-	        						ESPN Compact. Premier League 2015-2016. Manchester City vs NewCastle
-	        					</div>
-	        					<div style="position: absolute;top:12.5%;height:5%" class="twoselected show">
-	        						UEFA Champions League Weekly
-	        					</div>
-	        					<div style="position: absolute;top:17.5%" class="twoselected show">
-	        						Camino a Rio 2016
+	        				<td id="filter1" class="column" ng-class="tworows ? 'twoselected' : 'oneselected'">
+	        					<div ng-repeat="show in selected[0].shows" ng-style="{'position':'absolute','top': show.time, 'height':show.duration }" class="show trending" ng-class="tworows ? 'twoselected' : 'oneselected'">
 	        					</div>
 	        				</td>
-	        				<td id="filter2" class="column">
-	        					<div style="position: absolute;top:30%" class="twoselected show">
-	        						Evento 1
+	        				<td id="filter2" class="column" ng-show="tworows">
+	        					<div ng-repeat="show in selected[1].shows" ng-style="{'position':'absolute','top': show.time, 'height':show.duration }" class="show trending" ng-class="tworows ? 'twoselected' : 'oneselected'">
 	        					</div>
 	        				</td>
 	        			</tr>
