@@ -2,15 +2,20 @@
 //They may be overridden by the application using the screen.
 
 $myColor: #00dda0;
-$showColor: #300600;
-$showTextColor: #FFFFFF;
-$showColorEven: #5E5D57;
-$showTextColorEven: #FFFFFF;
-$trendingColor: #730600;
-$timeColorOdd: #FFFFFF;
-$timeColorEven: #4F4F4F;
-$timeTextEven: #FFFFFF;
+$showColor: #FFF; //#8C0303
+$showTextColor: ; //#FFF
+$showColorEven: #4F4F4F; //#F2F2F2
+$showTextColorEven: #FFF; //#FFF
+$trendingColor: #BF0404;
+$trendingTextColor: #FFF;
+$trendingColorBorder: #000;
+$timeColorOdd: #8C0303;
+$timeTextOdd: #FFF;
+$timeColorEven: #000;
+$timeTextEven: #FFF;
 $columnBorderColor: #DDD;
+$optionBorderColor: #BF0404;
+$optionSelectedBorderColor: #400101;
 
 .customHeader {
   color: $myColor;
@@ -18,12 +23,13 @@ $columnBorderColor: #DDD;
 
 .filter {
 	display: inline-block;
-	padding: 3% 3% 3% 3%;
+	margin: 3% 3% 3% 3%;
 	font-size: 50px;
 }
 
 .filters {
 	white-space: nowrap;
+	padding-right:3%; 
 }
 
 .scroll-bar-indicator
@@ -41,6 +47,8 @@ $columnBorderColor: #DDD;
 	margin: none;
 	white-space:nowrap;
 	text-align:center;
+	background-color: $timeColorOdd;
+	color: $timeTextOdd;
 }
 
 .time:nth-child(even) {
@@ -51,14 +59,15 @@ $columnBorderColor: #DDD;
 .column {
 	border-left:1px solid $columnBorderColor;
 	height:100%;
+	border-bottom: 20px;
 }
 
 .scroller {
-	height: 550px;
+	height: 530px;
 }
 
 .schedule {
-	margin: 2% 4% 2% 0%;
+	margin: 2% 4% 10% 0%;
 	height: 2000px;
 	width: 100%;
 }
@@ -81,13 +90,27 @@ td div {
 	width:40%;
 }
 
+.textcut {
+	white-space: normal;
+	line-height: 26px;
+}
+
 .trending {
-	box-shadow: 0 0 0 5px $trendingColor inset;
+	box-shadow: 0 0 0 5px $trendingColorBorder inset;
+	width: 100%;
+	height: 100%;
+	background-color: $trendingColor;
+	color: $trendingTextColor;
+	padding: 5px 0px 5px 0px;
+	line-height:18px;
+}
+
+.notrending {
+	padding: 5px;
 }
 
 .show {
 	background: $showColor;
-	padding: 5px 7px;
 	color: $showTextColor;
 	text-align: center;
 	display: table-cell;
@@ -99,6 +122,26 @@ td div {
 	color: $showTextColorEven;
 }
 
+
 .hour {
 	vertical-align: center;
+}
+
+.channel_icon{
+	max-width:75px;
+	max-height:75px;
+	margin: 5% 0% 5% 5%;
+	//border-color: $optionBorderColor;
+	//border-style: solid;
+	//border-width:3px;
+}
+
+.selection {
+	border-width:6px;
+	border-color: $optionSelectedBorderColor;
+	border-style: solid;
+}
+
+.rightshow {
+	border-left:1px solid $columnBorderColor;
 }

@@ -2,9 +2,10 @@
     <ion-content>
         <div class="filters">
 	        <ion-scroll direction="x">
-	        	<a class="channel_icon" ng-repeat="channel in data" ng-click="check(channel">
-	        		<img src="channel.img">
-	        	</a>
+	        	<a ng-repeat="channel in data" >
+	        		<img class="channel_icon" ng-class="{'selection': channel.checked}" ng-click="check(channel)" ng-src="{{channel.img}}">
+	        	</a
+				},>
 	        </ion-scroll>
         </div>
         <div class="wrapper">
@@ -38,12 +39,18 @@
 	        					<div class="time"> <p class="hour">10pm</p></div>
 	        					<div class="time"> <p class="hour">11pm</p></div>
 	        				</td>
-	        				<td id="filter1" class="column" ng-class="tworows ? 'twoselected' : 'oneselected'">
-	        					<div ng-repeat="show in selected[0].shows" ng-style="{'position':'absolute','top': show.time, 'height':show.duration }" class="show trending" ng-class="tworows ? 'twoselected' : 'oneselected'">
+	        				<td class="column" ng-class="tworows ? 'twoselected' : 'oneselected'">
+	        					<div ng-repeat="show in selected[0].shows" ng-style="{'position':'absolute','top': show.time+'%', 'height':show.duration+'%' }" class="show" ng-class="tworows ? 'twoselected' : 'oneselected'" ng-class="{'trending': show.trending}">
+	        						<div class="textcut" ng-class="{'trending': show.trending}">
+		        					{{show.name+'. '+show.specs+'('+show.live+')'}}
+		        					</div>
 	        					</div>
 	        				</td>
-	        				<td id="filter2" class="column" ng-show="tworows">
-	        					<div ng-repeat="show in selected[1].shows" ng-style="{'position':'absolute','top': show.time, 'height':show.duration }" class="show trending" ng-class="tworows ? 'twoselected' : 'oneselected'">
+	        				<td class="column column2" ng-show="tworows">
+	        					<div ng-repeat="show in selected[2].shows" ng-style="{'position':'absolute','top': show.time+'%', 'height':show.duration+'%' }" class="show rightshow" ng-class="tworows ? 'twoselected' : 'oneselected'" >
+	        					<div ng-class="show.trending ? 'trending' : 'notrending'">
+		        					{{show.name+'. '+show.specs+'('+show.live+')'}}
+		        				</div>
 	        					</div>
 	        				</td>
 	        			</tr>
@@ -53,3 +60,4 @@
         </div>
     </ion-content>
 </ion-view>
+<!-- ng-click="show.trending ? goHighlights() : goShow(show)" -->
