@@ -1,3 +1,4 @@
+//Screen sample data (for development purposes)
 data = [
 		{
 			'channel':'ESPN',
@@ -5,7 +6,7 @@ data = [
 			'checked':false,
 			'shows': [
 				{
-					'name':'Court central',
+					'name':'Court Central',
 					'live':'Grabado',
 					'time':0.5,
 					'duration':0.5,
@@ -14,6 +15,7 @@ data = [
 					'genre':'Tennis',
 					'rating':4,
 					'trending':true,
+					'trendingimg':'http://s3.amazonaws.com/vnn-aws-sites/2871/files/2014/06/tennis.jpg',
 					'votes':96,
 					'schedule' : [
 						{
@@ -429,7 +431,9 @@ data = [
 					'host':'',
 					'genre':'',
 					'rating':3,
-					'votes': 45
+					'votes': 45,
+					'trending':true,
+					'trendingimg':'http://golfmino.com/wp-content/uploads/2014/03/golfligasenior.jpg'
 				}
 			]
 		},
@@ -482,6 +486,7 @@ data = [
 					'rating':3,
 					'votes': 45,
 					'trending':true,
+					'trendingimg':'http://lloydsoccer.com/news_images/org_3064/Image/soccer-scholarships.jpg'
 				},
 				{
 					'name':'2015 Poker Stars',
@@ -492,7 +497,9 @@ data = [
 					'host':'',
 					'genre':'',
 					'rating':3,
-					'votes': 45
+					'votes': 45,
+					'trending':true,
+					'trendingimg':'http://www.elpokercasino.es/wp-content/uploads/2014/07/5-Stud-Poker.jpg'
 				},
 				{
 					'name':'Hablemos de fútbol',
